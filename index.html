@@ -8,23 +8,20 @@
         <link rel="icon" type="image/png" href="/assets/images/Icon.png">
         <meta name="description" content="Info about JonCorey.Dev and the cool projects being worked on.">
 
-        <link rel="stylesheet" href="assets/css/site.css">
+        <link rel="stylesheet" href="/assets/css/site.css">
+
+        <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
     </head>
     <body>
         <header>
-            <h1>&lt;/&gt; JonCorey.Dev</h1>
+            <h1>JonCorey.Dev</h1>
         </header>
-
-        <hr>
         
         <main>
             <div class="hero">
                 <h2>Hi, I'm Jon Corey</h2>
                 <p>I'm a software developer working to make complex things simple</p>
-                <a href="https://www.linkedin.com/in/jon-corey" class="button">Connect with me on LinkedIn</a>
             </div>
-
-            <hr>
 
             <section>
                 <h2 id="about">About</h2>
@@ -33,11 +30,111 @@
             </section>
 
             <section>
-                <h2 id="projects">Projects</h2>
+                <div class="horizontal-flex-container">
+                    <div>
+                        <h2 id="game-tally">Game Tally</h2>
 
-                <p>I'm currently working on a score counter app for board games and card games. There are already a bunch of apps like these out there, but they all seem to be missing one feature or another that I really want. I'm building my own counter app to include all the features I want, while still being simple and intuitive to use.</p>
+                        <p>Game Tally is the first project that I've released. See more info about it below.</p>
+                    </div>
 
-                <p>The main benefits of my app is that it can be installed any platform (iOS, Android, Mac, Windows, and Linux) and have as many counters as your device can handle.</p>
+                    <img src="/assets/images/GameTally/icon.svg" alt="" class="game-tally-logo">
+                </div>
+
+                <section>
+                    <h3 id="about">About Game Tally</h3>
+    
+                    <p>Game Tally is an app for keeping track of the score while playing board games and card games. It's especially helpful for keeping track of health totals in games like Magic: The Gathering or Star Realms.</p>
+    
+                    <p>Game Tally was built from the ground up to be simple and intuitive to use without skimping on features or customization.</p>
+    
+                    <p>It's also completely usable for free (there are no full-screen ads - I hate those). If you'd like to remove the banner ads and get access to more features (more than four counters and more color customizations) then you can get the premium upgrade which goes to support me as I improve this app and create more cool things in the future.</p>
+    
+                    <p class="center-text">
+                        <a href="https://gametally.app/" target="_blank" rel="noopener noreferrer" class="button primary">
+                            Check it out
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                            </svg>
+                        </a>
+                    </p>
+                </section>
+    
+                <section>
+                    <h3 id="platforms">Platforms</h3>
+    
+                    <p>Game Tally is a Progressive Web App (PWA). That means it can be used in the browser or installed on most modern devices.</p>
+    
+                    <div class="platform-group">
+                        <div class="platform">
+                            <img src="/assets/images/Platforms/apple.svg" alt="">
+                            <p>iOS/iPadOS</p>
+                        </div>
+                        <div class="platform">
+                            <img src="/assets/images/Platforms/android.svg" alt="">
+                            <p>Android</p>
+                        </div>
+                        <div class="platform">
+                            <img src="/assets/images/Platforms/windows.svg" alt="">
+                            <p>Windows 10/11</p>
+                        </div>
+                        <div class="platform">
+                            <img src="/assets/images/Platforms/apple.svg" alt="">
+                            <p>MacOS</p>
+                        </div>
+                        <div class="platform">
+                            <img src="/assets/images/Platforms/linux.svg" alt="">
+                            <p>Linux</p>
+                        </div>
+                        <div class="platform">
+                            <img src="/assets/images/Platforms/chrome.svg" alt="">
+                            <p>Chrome</p>
+                        </div>
+                        <div class="platform">
+                            <img src="/assets/images/Platforms/edge.svg" alt="">
+                            <p>Edge</p>
+                        </div>
+                        <div class="platform">
+                            <img src="/assets/images/Platforms/firefox.svg" alt="">
+                            <p>Firefox</p>
+                        </div>
+                        <div class="platform">
+                            <img src="/assets/images/Platforms/safari.svg" alt="">
+                            <p>Safari</p>
+                        </div>
+                    </div>
+                </section>
+    
+                <section>
+                    <h3 id="screenshots">Screenshots</h3>
+    
+                    <div class="embla">
+                        <div class="embla__viewport">
+                            <div class="embla__container">
+                                <div class="embla__slide"><img src="/assets/images/GameTally/gametally-1.png" alt="" /></div>
+                                <div class="embla__slide"><img src="/assets/images/GameTally/gametally-2.png" alt="" /></div>
+                                <div class="embla__slide"><img src="/assets/images/GameTally/gametally-3.png" alt="" /></div>
+                                <div class="embla__slide"><img src="/assets/images/GameTally/gametally-4.png" alt="" /></div>
+                                <div class="embla__slide"><img src="/assets/images/GameTally/gametally-5.png" alt="" /></div>
+                                <div class="embla__slide"><img src="/assets/images/GameTally/gametally-6.png" alt="" /></div>
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <button class="embla__prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                                </svg>
+                                Previous
+                            </button>
+                            <button class="embla__next">
+                                Next
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
             </section>
         </main>
 
@@ -48,5 +145,6 @@
         </footer>
 
         <script src="/assets/js/site.js"></script>
+        <script src="/assets/js/embla.js"></script>
     </body>
 </html>

@@ -1,18 +1,16 @@
 /* Site */
 
-@font-face {
-    font-family: Excalifont;
-    src: url("/assets/fonts/Excalifont-Regular.woff2");
-}
-
 :root {
-    font-family: Excalifont, cursive, 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", sans-serif;
 
     --background-color: #121212;
     --font-color: #d3d3d3;
     --font-hover-color: #ffffff;
     --font-click-color: #bbbbbb;
-    --primary-color: #154163;
+    --primary-color: #3456ff;
+    --secondary-color: #444444;
+
+    --max-item-height: 100vh;
 }
 
 html {
@@ -25,8 +23,9 @@ html {
     padding: 0.5rem;
 }
 
-h2 {
+h2, h3, h4, h5, h6 {
     font-weight: normal;
+    color: #ffffff;
 }
 
 p {
@@ -38,6 +37,7 @@ p {
 h1 {
     margin: 0;
     font-size: 1.5rem;
+    color: #ffffff;
 }
 
 header {
@@ -50,6 +50,9 @@ header {
     padding-top: 2.5rem;
     padding-bottom: 3rem;
     text-align: center;
+    color: #ffffff;
+    background: linear-gradient(145deg, #3456ff,  #ff355d);
+    border-radius: 6px;
 }
 
 .hero * {
@@ -60,25 +63,115 @@ header {
     margin-bottom: 1rem;
 }
 
-.hero .button {
-    margin-top: 2.5rem;
-}
-
-.button {
-    text-decoration: none;
-    background-color: var(--primary-color);
-    color: var(--font-color);
-    padding: 0.25rem 1rem;
-    border-radius: 6px;
-    display: inline-block;
-    margin-top: 1rem;
-}
-
 /* Main */
 
 section {
     margin-top: 3rem;
     margin-bottom: 3rem;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.link-reset {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.horizontal-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.horizontal-flex-container > * {
+    flex: 0 1 auto;
+}
+
+.game-tally-logo {
+    width: 100px;
+    height: 100px;
+    background-color: #8e44ad;
+    border-radius: 16px;
+    margin-left: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+@media (width < 320px) {
+    .horizontal-flex-container {
+        flex-direction: column;
+    }
+}
+
+button, .button {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: none;
+}
+
+button.primary, .button.primary {
+    background: linear-gradient(145deg, #674ed7,  #c33f8d);
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.platform-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.platform {
+    flex: 0 0 0;
+    min-width: 144px;
+}
+
+.platform img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: auto;
+}
+
+.platform p {
+    text-align: center;
+}
+
+/* Embla Carousel */
+
+.embla {
+    overflow: hidden;
+}
+
+.embla__container {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.embla__slide {
+    flex: 0 0 auto;
+    min-width: 20%;
+    max-width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.embla__slide img {
+    max-width: 100%;
+    height: 800px;
+    max-height: var(--max-item-height);
+    display: block;
+    margin: auto;
+    border-radius: 6px;
 }
 
 /* Footer */
