@@ -1,0 +1,8 @@
+{
+  "routes": [
+    {
+      "route": "/gametally*",
+      "rewrite": "/GameTally"
+    }
+  ]
+}
