@@ -1,0 +1,28 @@
+---
+layout: base
+title: Blog
+js: /assets/js/search.js
+---
+
+{% if collections.blog.size > 3 %}
+    <input type="text" id="search-input" class="search" placeholder="Search blog posts..." aria-label="Search blog posts" />
+{% endif %}
+
+<ul id="search-results">
+    {%- for item in collections.blog reversed -%}
+        <li class="search-result-item {% if forloop.length <= 5 %}span-all{% endif %}">
+            <a href="{{ item.url }}">
+                <div class="search-result-image">
+                    <img src="{{ item.data.image | default: '/assets/images/blog/cards/default.svg' }}" alt="" />
+                </div>
+                <div class="search-result-info">
+                    <h2>{{ item.data.title }}</h2>
+                    <p class="description">{{ item.data.description }}</p>
+                    <p class="metadata"><i class="bi bi-person"></i> {{ item.data.author }}</p>
+                    <p class="metadata"><i class="bi bi-clock"></i> {{ item.data.date | date: "%B %d, %Y", 0 }}</p>
+                    <p class="metadata"><i class="bi bi-folder2"></i> {{ item.data.primaryCategory }}</p>
+                </div>
+            </a>
+        </li>
+    {%- endfor -%}
+</ul>

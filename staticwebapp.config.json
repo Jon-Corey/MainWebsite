@@ -2,7 +2,14 @@
   "routes": [
     {
       "route": "/gametally*",
-      "rewrite": "/GameTally"
+      "rewrite": "/game-tally"
+    },
+    {
+      "route": "/GameTally*",
+      "rewrite": "/game-tally"
     }
-  ]
+  ],
+  "navigationFallback": {
+    "rewrite": "/404"
+  }
 }

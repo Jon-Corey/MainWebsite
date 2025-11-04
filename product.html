@@ -1,0 +1,25 @@
+---
+layout: base
+title: Products
+js: /assets/js/search.js
+---
+
+{% if collections.product.size > 3 %}
+    <input type="text" id="search-input" class="search" placeholder="Search products..." aria-label="Search products" />
+{% endif %}
+
+<ul id="search-results">
+    {%- for item in collections.product -%}
+        <li class="search-result-item {% if forloop.length <= 5 %}span-all{% endif %}">
+            <a href="{{ item.url }}">
+                <div class="search-result-image" style="background: linear-gradient(in oklch 145deg, {{ item.data.primaryColor | default:'#3456ff' }}, {{ item.data.secondaryColor | default:'#ff355d' }})">
+                    <img src="{{ item.data.image | default: '/assets/images/blog/cards/default.svg' }}" alt="" />
+                </div>
+                <div class="search-result-info">
+                    <h2>{{ item.data.title }}</h2>
+                    <p class="description">{{ item.data.description }}</p>
+                </div>
+            </a>
+        </li>
+    {%- endfor -%}
+</ul>

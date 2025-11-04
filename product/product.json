@@ -1,0 +1,5 @@
+{
+  "permalink": "{{ page.fileSlug }}/index.html",
+  "layout": "base",
+  "tags": ["product"]
+}

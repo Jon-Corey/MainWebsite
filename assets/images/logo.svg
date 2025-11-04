@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-50 -50 100 100" width="100" height="100">
+    <defs>
+        <linearGradient id="gradient" x1='10.06%' y1='-7.04%' x2='89.94%' y2='107.04%'>
+            <stop offset="0%" stop-color='#3456ff'/>
+            <stop offset="100%" stop-color='#ff355d'/>
+        </linearGradient>
+    </defs>
+    <rect width="100" height="100" x="-50" y="-50" fill="url(#gradient)" rx="25" ry="25" />
+
+    <svg viewBox="0 0 320 512" width="37" x="-46" y="-50">
+        <path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
+    </svg>
+
+    <g transform="rotate(-24)">
+        <svg viewBox="0 0 16 16" width="118" height="118" x="-59" y="-59">
+            <path fill="#ffffff" d="M11.354 4.646a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708l6-6a.5.5 0 0 1 .708 0"/>
+        </svg>
+    </g>
+
+    <svg viewBox="0 0 320 512" width="37" x="9" y="-50">
+        <path fill="#ffffff" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+    </svg>
+</svg>
