@@ -15,9 +15,8 @@ Topics:
 - How do we store your data?
 - Marketing
 - What are your data protection rights?
-- What are cookies?
-- How do we use cookies?
-- How to manage your cookies
+- Cookies
+- Browser Storage
 - Privacy policies of other websites
 - Changes to our privacy policy
 - How to contact us
@@ -30,11 +29,11 @@ JonCorey.Dev collects the following data:
 - Your device type and browser info
 - Your general location (as specific as the city)
 
-This data is collected by Microsoft Clarity. For more information about how Microsoft collects and uses your data, visit the [Microsoft Privacy Statement](https://www.microsoft.com/privacy/privacystatement).
+This data is collected by [Umami](https://umami.is), an analytics platform. Your data is anonymized and does not contain personal information.
 
 ## How do we collect your data?
 
-JonCorey.Dev uses Microsoft Clarity, which collects your data while you use this site.
+JonCorey.Dev uses [Umami](https://umami.is), which collects your data while you use this site.
 
 ## How will we use your data?
 
@@ -44,7 +43,7 @@ JonCorey.Dev collects your data so that we can:
 
 ## How do we store your data?
 
-Your data is stored securely by Microsoft. For more information, visit the [Microsoft Privacy Statement](https://www.microsoft.com/privacy/privacystatement).
+Your data is stored securely by [Umami](https://umami.is) using their Umami Cloud service.
 
 ## Marketing
 
@@ -52,31 +51,15 @@ JonCorey.Dev does not send marketing-related communications.
 
 ## What are your data protection rights?
 
-JonCorey.Dev would like to make sure you are fully aware of all of your data protection rights.
-
-If you are in a jurisdiction that gives you the right to not have your data collected until you opt-in, we will not collect your data until you opt-in. After opting in or out, you will have the ability to change your selection from the [cookie policy page](/cookie-policy).
-
-If you are in a jurisdiction that gives you the right to opt-out of having your data collected, we will collect your data while you use this site until you opt-out. After opting in or out, you will have the ability to change your selection from the [cookie policy page](/cookie-policy).
-
-If you are not in a jurisdiction that gives you the right to opt-in or opt-out, we will collect your data while you use this site.
-
-We determine which jurisdiction you are in by checking your location via your IP address. We use [ipapi](https://ipapi.co/) for this process. Services like VPNs may lead to this site getting incorrect location information and therefore providing you with different rights. If you are not using a VPN and believe you don't have the rights you should be, given your jusrisdiction, please contact us at [help@joncorey.dev](mailto:help@joncorey.dev).
-
-Since we do not collect identifying information such as name or email, we are unable to delete the data we have collected from you. We are also unable to provide you with the data we have collected from you.
+JonCorey.Dev does not collect your personal information or use cookies. Because no identifiable data is collected, we are unable to provide, delete, or modify any personal data related to you. If you have questions about privacy or data use on this site, please contact us at [help@joncorey.dev](mailto:help@joncorey.dev).
 
 ## Cookies
 
-Cookies are text files placed on your computer to collect standard Internet log information and visitor behavior information. When you visit our websites, we may collect information from you automatically through cookies or similar technology
+Cookies are text files placed on your computer to collect standard Internet log information and visitor behavior information. JonCorey.Dev does not use cookies.
 
-For further information, visit [internetcookies.com](https://internetcookies.com).
+## Browser Storage
 
-## How do we use cookies?
-
-JonCorey.Dev uses Microsoft Clarity, which adds cookies to your browser for the purposes of analytics and tracking. For more information on which cookies Microsoft Clarity uses, see their [cookie documentation](https://learn.microsoft.com/en-us/clarity/setup-and-installation/cookie-list).
-
-## How to manage cookies
-
-You can set your browser not to accept cookies, and [internetcookies.com](https://internetcookies.com) tells you how to remove cookies from your browser. However, in a few cases, some of our website features may not function as a result.
+JonCorey.Dev uses your browser's Local Storage to save your theme preference (light or dark mode). This information never leaves your device and is not shared or transmitted to our servers or any third parties.
 
 ## Privacy policies of other websites
 
@@ -84,7 +67,7 @@ The JonCorey.Dev website contains links to other websites. Our privacy policy ap
 
 ## Changes to our privacy policy
 
-JonCorey.Dev keeps its privacy policy under regular review and places any updates on this web page. This privacy policy was last updated on 4 November 2025.
+JonCorey.Dev keeps its privacy policy under regular review and places any updates on this web page. This privacy policy was last updated on 17 November 2025.
 
 ## How to contact us
 

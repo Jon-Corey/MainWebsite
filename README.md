@@ -19,15 +19,13 @@ The site is built by **[11ty](https://11ty.dev)**, a static site generator. The 
 
 ### 🛠️ Other Tools
 
-- **[CookieConsent v3](https://cookieconsent.orestbida.com)**: The frontend logic and UI for the cookie consent banner.
 - **[Bootstrap Icons](https://icons.getbootstrap.com)**: The icons used on this site.
 - **[Vector Text](https://vector-text.com)**: Used to generate the text in the product and blog article cards.
 - **[PrismJS](https://prismjs.com)**: Used for syntax highlighting of code blocks.
   - **[VS Code Dark+ Prism Theme](https://github.com/PrismJS/prism-themes)**: The syntax highlighting theme.
 - **[linkedom](https://github.com/WebReflection/linkedom)**: Used to parse and modify some HTML in the build process.
 - **[Embla Carousel](https://www.embla-carousel.com)**: Used for the screenshot carousel on the [Game Tally page](https://joncorey.dev/game-tally).
-- **[UA Parser](https://uaparser.dev)**: Used to parse User Agent strings for compliance reasons in regions that require it (e.g. for GDPR).
-- **[Microsoft Clarity](https://clarity.microsoft.com)**: Analytics used for improving the contents of the website.
+- **[Umami](https://umami.is)**: Privacy-focused analytics used for improving the contents of the website.
 
 ## 📁 File Structure
 
