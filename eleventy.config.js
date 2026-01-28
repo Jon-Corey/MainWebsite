@@ -6,6 +6,9 @@ export default function (eleventyConfig) {
 	// Copy `assets/` to `_site/assets/`
 	eleventyConfig.addPassthroughCopy("assets");
 
+	// Copy `robots.txt` to `_site/robots.txt`
+	eleventyConfig.addPassthroughCopy("robots.txt");
+
 	// Add syntax highlighting
 	eleventyConfig.addPlugin(syntaxHighlight);
 
