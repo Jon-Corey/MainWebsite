@@ -1,15 +1,16 @@
 ---
 layout: base
-title: Products
+title: Projects
+description: Check out my projects for a variety of apps and tools that I've built to help people solve real problems.
 js: /assets/js/search.js
 ---
 
-{% if collections.product.size > 3 %}
-    <input type="text" id="search-input" class="search" placeholder="Search products..." aria-label="Search products" />
+{% if collections.project.size > 3 %}
+    <input type="text" id="search-input" class="search" placeholder="Search projects..." aria-label="Search projects" />
 {% endif %}
 
 <ul id="search-results">
-    {%- for item in collections.product -%}
+    {%- for item in collections.project -%}
         <li class="search-result-item {% if forloop.length <= 5 %}span-all{% endif %}">
             <a href="{{ item.url }}">
                 <div class="search-result-image" style="background: linear-gradient(in oklch 145deg, {{ item.data.primaryColor | default:'#3456ff' }}, {{ item.data.secondaryColor | default:'#ff355d' }})">

@@ -1,6 +1,7 @@
 ---
 layout: base
 title: Privacy Policy
+description: The privacy policy for JonCorey.Dev.
 ---
 
 # Privacy Policy

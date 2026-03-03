@@ -11,8 +11,8 @@ This site is a static site that uses HTML, CSS, and JavaScript (no frameworks).
 The site is built by **[11ty](https://11ty.dev)**, a static site generator. The site uses 11ty to accomplish the following things:
 
 - Reuse HTML in multiple places (e.g. `/_includes/base.html` is used on every page).
-- Populate the 'Products' and 'Blog' lists with all products/blog articles automatically (see `/product.html`).
-- Rename and move HTML files to make the URL look better (e.g. `joncorey.dev/product.html` -> `joncorey.dev/product/`).
+- Populate the 'Projects' and 'Blog' lists with all projects/blog articles automatically (see `/projects.html`).
+- Rename and move HTML files to make the URL look better (e.g. `joncorey.dev/projects.html` -> `joncorey.dev/projects/`).
 - Add `id` attributes to headings (e.g. `<h2>About</h2>` -> `<h2 id="about">About</h2>`).
 - Add `target="_blank" rel="noopener noreferrer"` to external links.
 - Add syntax highlighting to code blocks (using [PrismJS](https://prismjs.com)).
@@ -20,7 +20,7 @@ The site is built by **[11ty](https://11ty.dev)**, a static site generator. The 
 ### 🛠️ Other Tools
 
 - **[Bootstrap Icons](https://icons.getbootstrap.com)**: The icons used on this site.
-- **[Vector Text](https://vector-text.com)**: Used to generate the text in the product and blog article cards.
+- **[Vector Text](https://vector-text.com)**: Used to generate the text in the project and blog article cards.
 - **[PrismJS](https://prismjs.com)**: Used for syntax highlighting of code blocks.
   - **[VS Code Dark+ Prism Theme](https://github.com/PrismJS/prism-themes)**: The syntax highlighting theme.
 - **[linkedom](https://github.com/WebReflection/linkedom)**: Used to parse and modify some HTML in the build process.
@@ -72,7 +72,7 @@ All original source code in this repository - including templates, configuration
 
 ### 🚫 Content and Branding
 
-All original content - including written text (e.g., blog posts, product descriptions, landing pages), branding, images, and other media - is not licensed for reuse or redistribution. These materials are protected under copyright and may not be copied, modified, or republished without explicit permission.
+All original content - including written text (e.g., blog posts, project descriptions, landing pages), branding, images, and other media - is not licensed for reuse or redistribution. These materials are protected under copyright and may not be copied, modified, or republished without explicit permission.
 
 ### 📦 Third-Party Code
 

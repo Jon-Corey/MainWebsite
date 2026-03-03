@@ -23,6 +23,7 @@
         <script defer src="https://cloud.umami.is/script.js" data-website-id="f1839982-8e2a-4a23-95be-6e0bced26957" data-domains="joncorey.dev"></script>
 
         <title>{{ title }}</title>
+        <meta name="description" content="{{ description }}">
     </head>
     <body>
         <header id="navbar">
@@ -38,7 +39,7 @@
                 </button>
                 <div id="navbar-menu" aria-labelledby="navbar-toggle">
                     <ul class="navbar-links">
-                        <li class="navbar-item"><a class="navbar-link" href="/product">Products</a></li>
+                        <li class="navbar-item"><a class="navbar-link" href="/projects">Projects</a></li>
                         {% if collections.blog.size > 0 %}
                         <li class="navbar-item"><a class="navbar-link" href="/blog">Blog</a></li>
                         {% endif %}
