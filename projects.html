@@ -5,17 +5,21 @@ description: Check out my projects for a variety of apps and tools that I've bui
 js: /assets/js/search.js
 ---
 
+<style>
+    :root {
+        --body-max-width: var(--navbar-max-width);
+    }
+</style>
+
 {% if collections.project.size > 3 %}
     <input type="text" id="search-input" class="search" placeholder="Search projects..." aria-label="Search projects" />
 {% endif %}
 
 <ul id="search-results">
     {%- for item in collections.project -%}
-        <li class="search-result-item {% if forloop.length <= 5 %}span-all{% endif %}">
+        <li class="search-result-item">
             <a href="{{ item.url }}">
-                <div class="search-result-image" style="background: linear-gradient(in oklch 145deg, {{ item.data.primaryColor | default:'#3456ff' }}, {{ item.data.secondaryColor | default:'#ff355d' }})">
-                    <img src="{{ item.data.image | default: '/assets/images/blog/cards/default.svg' }}" alt="" />
-                </div>
+                <img src="{{ item.data.image | default: '/assets/images/blog/cards/default.svg' }}" alt="" />
                 <div class="search-result-info">
                     <h2>{{ item.data.title }}</h2>
                     <p class="description">{{ item.data.description }}</p>
