@@ -48,17 +48,17 @@ themeToggle.addEventListener('click', toggleTheme);
         button.classList.add('copy-button');
         button.type = 'button';
         button.ariaLabel = 'Copy code to clipboard';
-        button.innerHTML = '<i class="bi bi-copy"></i>';
+        button.innerHTML = '<i class="ti ti-copy"></i>';
 
         button.addEventListener('click', () => {
             navigator.clipboard.writeText(codeBlock.textContent);
-            button.innerHTML = '<i class="bi bi-check-lg"></i>';
+            button.innerHTML = '<i class="ti ti-check"></i>';
             button.classList.add('copied');
             setTimeout(() => {
                 button.classList.remove('copied');
             }, 1500);
             setTimeout(() => {
-                button.innerHTML = '<i class="bi bi-copy"></i>';
+                button.innerHTML = '<i class="ti ti-copy"></i>';
             }, 2000);
         });
         codeBlock.appendChild(button);

@@ -19,7 +19,7 @@ The site is built by **[11ty](https://11ty.dev)**, a static site generator. The 
 
 ### 🛠️ Other Tools
 
-- **[Bootstrap Icons](https://icons.getbootstrap.com)**: The icons used on this site.
+- **[Tabler Icons](https://tabler.io/icons)**: The icons used on this site.
 - **[Vector Text](https://vector-text.com)**: Used to generate the text in the project and blog article cards.
 - **[PrismJS](https://prismjs.com)**: Used for syntax highlighting of code blocks.
   - **[VS Code Dark+ Prism Theme](https://github.com/PrismJS/prism-themes)**: The syntax highlighting theme.
