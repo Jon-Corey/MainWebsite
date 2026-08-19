@@ -6,6 +6,8 @@
 * Modified by JonCorey.Dev:
 * - Changed font size to use rem instead of px
 * - Added border radius
+* - Changed font family to use Atkinson Hyperlegible Mono
+* - Removed italic style
 */
 pre[class*="language-"],
 code[class*="language-"] {
@@ -13,7 +15,7 @@ code[class*="language-"] {
 	font-size: 0.8rem;
     border-radius: var(--border-radius, 0.5rem);
 	text-shadow: none;
-	font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace;
+	font-family: "Atkinson Hyperlegible Mono", monospace;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;
@@ -156,10 +158,6 @@ pre[class*="language-"] {
 
 .token.important {
 	color: #569cd6;
-}
-
-.token.italic {
-	font-style: italic;
 }
 
 .token.constant {
