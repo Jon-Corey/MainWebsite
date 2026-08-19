@@ -3,11 +3,15 @@ import { IdAttributePlugin } from "@11ty/eleventy";
 import { parseHTML } from "linkedom";
 
 export default function (eleventyConfig) {
-	// Copy `assets/` to `_site/assets/`
-	eleventyConfig.addPassthroughCopy("assets");
+	// Set the input directory to `src`
+    eleventyConfig.setInputDirectory('src');
 
-	// Copy `robots.txt` to `_site/robots.txt`
-	eleventyConfig.addPassthroughCopy("robots.txt");
+	// Pass through static assets
+	eleventyConfig.addPassthroughCopy("src/assets");
+
+	// Pass through individual files in the root
+	eleventyConfig.addPassthroughCopy("src/robots.txt");
+	eleventyConfig.addPassthroughCopy("src/staticwebapp.config.json");
 
 	// Add syntax highlighting
 	eleventyConfig.addPlugin(syntaxHighlight);
