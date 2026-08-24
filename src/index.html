@@ -1,21 +1,87 @@
 ---
 layout: base
 title: JonCorey.Dev
-description: I'm Jon Corey, an independent software developer working to make complex things simple. Check out my projects for a variety of apps and tools that I've built to help people solve real problems.
+description: Tools and resources built to solve real problems with less friction.
 ---
+
 <div class="hero">
-    <h2>Hi, I'm Jon Corey</h2>
-    <p>I'm a software developer working to make complex things simple</p>
+    <h1>Useful tools, easy to use.</h1>
+    <p>Tools and resources built to solve real problems with less friction.</p>
+    <a class="primary button" href="/tools">
+        View all tools
+        <svg class="icon" viewBox="0 0 24 24"><path d="M9 6l6 6l-6 6" /></svg>
+    </a>
 </div>
 
-<br>
+<h2>Why people use these tools</h2>
 
-<p>I've built a variety of apps and tools to help people solve real problems. From a score counter app for board games and card games to an icon search tool, my projects aim to make complex things simpler.</p>
+<ul class="card-group">
+    <li class="card">
+        <h3>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M9 12l2 2l4 -4" /></svg>
+            High quality
+        </h3>
+        <p>Thoughtfully built, tested, and refined for speed, clarity, and reliability.</p>
+    </li>
+    <li class="card">
+        <h3>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M5 5a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2l0 -14" /><path d="M9 7l6 0" /><path d="M9 11l6 0" /><path d="M9 15l4 0" /></svg>
+            Easy to use
+        </h3>
+        <p>Focused feature sets and simple interfaces help users solve tasks quickly without extra friction.</p>
+    </li>
+    <li class="card">
+        <h3>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3" /><path d="M11 11a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12l0 2.5" /></svg>
+            Privacy-first
+        </h3>
+        <p>Processing stays on-device whenever possible and any analytics are minimal and anonymous.</p>
+    </li>
+</ul>
 
-<p>You can see what I've built on my projects page. I hope you find something useful that makes your life a bit easier.</p>
+<h2>Featured tool</h2>
 
-<p class="center-text">
-    <a href="/projects" class="button primary">
-        View Projects <i class="ti ti-external-link"></i>
-    </a>
-</p>
+{% assign featuredTool = collections.tool | find: "data.title", "DevTools" %}
+<div class="tool-info featured-tool">
+    <img src="{{ featuredTool.data.image }}" alt="{{ featuredTool.data.alt }}" class="card-image" />
+    <div class="tool-content">
+        <h3>{{ featuredTool.data.title }}</h3>
+        <p>DevTools is a collection of tools and resources for developers. The tools are built to be simple to use and run fully on your own device so that your data stays private.</p>
+        <p>Some of the tools on DevTools:</p>
+        <ul>
+            <li><strong>Contrast Checker:</strong> Check the contrast between two colors to make sure they meet accessibility standards.</li>
+            <li><strong>Image Converter:</strong> Convert images between different formats.</li>
+            <li><strong>HTTP Status Code Lookup:</strong> Look up HTTP status codes and their meanings.</li>
+        </ul>
+        <a class="primary button" href="{{ featuredTool.data.url }}" target="_blank" rel="noopener noreferrer">
+            Open {{ featuredTool.data.title }}
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg>
+        </a>
+    </div>
+</div>
+
+<h2>Newest tools</h2>
+
+<ul class="card-group">
+    {% assign cardsShown = 0 %}
+    {% for item in collections.tool reversed %}
+        {% if cardsShown >= 3 %}
+            {% break %}
+        {% endif %}
+        {% if item.data.title == "DevTools" %}
+            {% continue %}
+        {% endif %}
+        {% assign cardsShown = cardsShown | plus: 1 %}
+        <li>
+            <a href="{{ item.url }}" class="card">
+                <img src="{{ item.data.image }}" alt="{{ item.data.alt }}" class="card-image" />
+                <h3>{{ item.data.title }}</h3>
+                <p>{{ item.data.description }}</p>
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+<a class="primary button" href="/tools">
+    View all tools
+    <svg class="icon" viewBox="0 0 24 24"><path d="M9 6l6 6l-6 6" /></svg>
+</a>

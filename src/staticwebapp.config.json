@@ -1,15 +1,8 @@
 {
-  "routes": [
-    {
-      "route": "/gametally*",
-      "rewrite": "/game-tally"
-    },
-    {
-      "route": "/GameTally*",
-      "rewrite": "/game-tally"
+    "responseOverrides": {
+        "404": {
+            "rewrite": "/404.html",
+            "statusCode": 404
+        }
     }
-  ],
-  "navigationFallback": {
-    "rewrite": "/404.html"
-  }
 }

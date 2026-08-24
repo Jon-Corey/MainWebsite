@@ -1,0 +1,45 @@
+---
+layout: base
+---
+
+<div class="hero">
+    <h1>{{ title }}</h1>
+    <p>{{ description }}</p>
+    <a class="primary button" href="{{ url }}" target="_blank" rel="noopener noreferrer">
+        Open {{ title }}
+        <svg class="icon" viewBox="0 0 24 24"><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg>
+    </a>
+</div>
+
+<div class="tool-info">
+    <img src="{{ image }}" alt="{{ alt }}" class="card-image" />
+    <div class="tool-content">
+        {{ content }}
+        <a class="primary button" href="{{ url }}" target="_blank" rel="noopener noreferrer">
+            Open {{ title }}
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg>
+        </a>
+    </div>
+</div>
+
+<h2>Some other tools</h2>
+
+<ul class="card-group">
+    {% assign cardsShown = 0 %}
+    {% for item in collections.tool reversed %}
+        {% if cardsShown >= 3 %}
+            {% break %}
+        {% endif %}
+        {% if item.data.title == title %}
+            {% continue %}
+        {% endif %}
+        {% assign cardsShown = cardsShown | plus: 1 %}
+        <li>
+            <a href="{{ item.url }}" class="card">
+                <img src="{{ item.data.image }}" alt="{{ item.data.alt }}" class="card-image" />
+                <h3>{{ item.data.title }}</h3>
+                <p>{{ item.data.description }}</p>
+            </a>
+        </li>
+    {% endfor %}
+</ul>

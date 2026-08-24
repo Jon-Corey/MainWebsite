@@ -1,77 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/logo-16.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo-32.png">
-        <link rel="icon" type="image/svg+xml" sizes="all" href="/assets/images/logo.svg">
-        <link rel="apple-touch-icon" href="/assets/images/logo-180.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/logo-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo-32.png">
+    <link rel="icon" type="image/svg+xml" sizes="any" href="/assets/images/logo.svg">
+    <link rel="apple-touch-icon" href="/assets/images/logo-180.png">
 
-        <!-- Font Preloading -->
-        <link rel="preload" href="/assets/fonts/AtkinsonHyperlegibleNext-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="/assets/fonts/AtkinsonHyperlegibleMono-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Font Preloading -->
+    <link rel="preload" href="/assets/fonts/AtkinsonHyperlegibleNext-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
 
-        {% for file in css %}
-            <link rel="stylesheet" href="{{ file }}">
-        {% endfor %}
-        <link rel="stylesheet" href="/assets/css/tabler-icons.min.css">
-        <link rel="stylesheet" href="/assets/css/prism-theme.css">
-        <link rel="stylesheet" href="/assets/css/site.css">
+    <link rel="stylesheet" href="/assets/css/site.css">
 
-        <script src="/assets/js/initialize-theme.js"></script>
+    <script>
+        (() => {
+            let theme = localStorage.getItem('theme')?.trim()?.toLowerCase() ?? '';
+            if (theme !== 'dark' && theme !== 'light') {
+                theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 
-        <script defer src="https://cloud.umami.is/script.js" data-website-id="f1839982-8e2a-4a23-95be-6e0bced26957" data-domains="joncorey.dev"></script>
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
 
-        <title>{{ title }}</title>
-        <meta name="description" content="{{ description }}">
-    </head>
-    <body>
-        <header id="navbar">
-            <nav class="navbar-container">
-                <a href="/" class="home-link">
-                    <img src="/assets/images/logo.svg" class="navbar-logo" alt="">
-                    <h1>JonCorey.Dev</h1>
-                </a>
-                <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <div id="navbar-menu" aria-labelledby="navbar-toggle">
-                    <ul class="navbar-links">
-                        <li class="navbar-item"><a class="navbar-link" href="/projects">Projects</a></li>
-                        {% if collections.blog.size > 0 %}
-                        <li class="navbar-item"><a class="navbar-link" href="/blog">Blog</a></li>
-                        {% endif %}
-                        <li class="navbar-item">
-                            <button type="button" id="theme-toggle" aria-label="Toggle theme">
-                                <i class="icon-light ti ti-sun"></i>
-                                <i class="icon-dark ti ti-moon"></i>
-                                <span class="small-only">Toggle theme</span>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+    <!-- Open Graph Tags -->
+    {% capture openGraphTitle %}JonCorey.Dev: {{ title }}{% endcapture %}
+    {% if title == "JonCorey.Dev" %}
+        {% assign openGraphTitle = "JonCorey.Dev" %}
+    {% endif %}
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ openGraphTitle }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="https://joncorey.dev{{ openGraphImage | default: "/assets/images/card.png" }}">
+    <meta property="og:image:alt" content="{{ openGraphAlt | default: "JonCorey.Dev: useful tools, easy to use." }}">
+    <meta property="og:url" content="https://joncorey.dev{{ page.url }}">
 
-        <main>
-            {{ content }}
-        </main>
+    <!-- Twitter / X -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="{{ openGraphTitle }}">
+    <meta property="twitter:description" content="{{ description }}">
+    <meta property="twitter:image" content="https://joncorey.dev{{ openGraphImage | default: "/assets/images/card.png" }}">
+    <meta property="twitter:image:alt" content="{{ openGraphAlt | default: "JonCorey.Dev: useful tools, easy to use." }}">
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">
+            <img src="/assets/images/logo.svg" alt="">
+            <span>JonCorey.Dev</span>
+        </a>
+        <nav>
+            <a href="/tools">Tools</a>
+        </nav>
+        <button type="button" class="icon-only-button" aria-label="Toggle Theme" onclick="toggleTheme()">
+            <svg class="icon light-only" viewBox="0 0 24 24"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008" /></svg>
+            <svg class="icon dark-only" viewBox="0 0 24 24"><path d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
+        </button>
+    </header>
 
-        <footer>
-            <hr>
-            <span>&copy; JonCorey.Dev {{ "now" | date: "%Y" }}</span>
-            <div class="footer-links">
-                <a href="/privacy-policy">Privacy Policy</a>
-            </div>
-        </footer>
+    <main>
+        {{ content }}
+    </main>
 
-        <script src="/assets/js/app.js"></script>
-        {% for file in js %}
-            <script src="{{ file }}"></script>
-        {% endfor %}
-    </body>
+    <footer>
+        <hr>
+        <span>&copy; JonCorey.Dev {{ "now" | date: "%Y" }}</span>
+        <br>
+        <a href="/privacy-policy">Privacy Policy</a>
+    </footer>
+
+    <script src="/assets/js/app.js" defer></script>
+    {% if eleventy.env.runMode == "build" %}
+    {% comment %} Register the analytics only in production builds.{% endcomment %}
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "cb6db2a317644f1593ff9555206d94ea"}'></script><!-- End Cloudflare Web Analytics -->
+    {% endif %}
+</body>
 </html>
